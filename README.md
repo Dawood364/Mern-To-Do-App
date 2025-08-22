@@ -44,11 +44,6 @@ cd mern-todo-app
 2️⃣ Backend Setup
 cd backend
 npm install
-
-# Create .env file
-
-MONGO_URI=your-mongodb-connection-string
-PORT=3000
 npm start
 3️⃣ Frontend Setup
 cd frontend
@@ -61,7 +56,6 @@ npm run dev
 | POST | `/todos` | Add a new todo |
 | PUT | `/todos/:id` | Update a todo |
 | DELETE | `/todos/:id` | Delete a todo |
-🖼 Screenshots
 
 ## 📸 Screenshot
 
