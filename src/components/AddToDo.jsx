@@ -1,39 +1,31 @@
-import { useRef, useState } from "react";
-import { IoMdAdd } from "react-icons/io";
 import { IoMdAddCircle } from "react-icons/io";
+import { useRef } from "react";
+
 function AddTask({ ToDoItemss }) {
-  const value = useRef(0);
   const ToDoElemment = useRef();
   const DueDateElemment = useRef();
 
   const hamdlebuttonclick = (event) => {
+    event.preventDefault();
     const todoname = ToDoElemment.current.value;
     const tododate = DueDateElemment.current.value;
-    event.preventDefault();
+
+    if (!todoname || !tododate) return;
+
     ToDoItemss(todoname, tododate);
     ToDoElemment.current.value = "";
     DueDateElemment.current.value = "";
   };
 
   return (
-    <form action="" onSubmit={hamdlebuttonclick}>
-      <div className="container ">
-        <div className="row row-cols-4">
-          <div className="col-sm-4 ">
-            <input ref={ToDoElemment} type="text" className="input1" />
-          </div>
-
-          <div className="col-sm-4 ">
-            <input ref={DueDateElemment} type="date" className="input1" />
-          </div>
-          <div className="col-sm-2">
-            <button className="btn btn-success to-do-button">
-              <IoMdAddCircle />
-            </button>
-          </div>
-        </div>
-      </div>
+    <form onSubmit={hamdlebuttonclick} className="add-task-form">
+      <input ref={ToDoElemment} type="text" placeholder="Enter Task..." />
+      <input ref={DueDateElemment} type="date" />
+      <button className="btn btn-success add-btn">
+        <IoMdAddCircle size={20} />
+      </button>
     </form>
   );
 }
+
 export default AddTask;

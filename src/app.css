@@ -18,3 +18,75 @@ text-align: left;
  padding: 8px;
  border-radius: 10px;
 }
+.edit {
+  margin-left: 5px;
+}
+/* Global */
+body {
+  background: #f8f9fa;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Add Task */
+.add-task-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.add-task-form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.add-btn {
+  border-radius: 8px;
+  padding: 10px 15px;
+}
+
+/* To-do Cards */
+.todo-card {
+  background: #fff;
+  margin: 12px auto;
+  padding: 15px 20px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.todo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.todo-info {
+  flex: 1;
+}
+
+.todo-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.todo-date {
+  font-size: 0.9rem;
+  color: #6c757d;
+  margin: 0;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-btn {
+  border-radius: 8px;
+}
