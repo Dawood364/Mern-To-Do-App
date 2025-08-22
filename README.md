@@ -57,9 +57,14 @@ npm run dev
 | PUT | `/todos/:id` | Update a todo |
 | DELETE | `/todos/:id` | Delete a todo |
 
-## 📸 Screenshot
+## 📸 Screenshot Of UI
 
 ![App Screenshot](./public/pic.png)
+
+## 📸 Screenshot Of DataBase
+
+![DATABase](./public/database.png)
+
 📜 License
 
 This project is licensed under the MIT License.
